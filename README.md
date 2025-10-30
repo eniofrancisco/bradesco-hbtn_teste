@@ -1,28 +1,31 @@
-# Projeto: Validador de Email com JUnit
+# Validador de MEI com JUnit
 
-Este projeto Java tem como objetivo validar endereços de email com base em critérios simples e realizar testes automatizados utilizando JUnit.
+Este projeto Java verifica se uma pessoa está apta a se registrar como Microempreendedor Individual (MEI) com base nas regras da legislação brasileira.
 
 ## 📁 Estrutura do Projeto
 
 ## 📌 Regras de Validação
 
-A classe 'Pessoa' possui o método estático 'emailValid(String email)' que retorna 'true' ou 'false' com base nos seguintes critérios:
+A classe 'Person' possui o método 'isMEI()' que retorna 'true' ou 'false' com base nos seguintes critérios:
 
-- O email deve conter o caractere '@'
-- O email deve ter no máximo 50 caracteres
-- O email não pode ser 
+- Ter mais de 18 anos
+- Não ser pensionista
+- Não ser servidor público
+- Não possuir outra empresa
+- Ter faturamento anual inferior a R$ 130.000,00
 
 ## 🧪 Testes com JUnit
 
-A classe 'TesteEmail' realiza três testes:
+A classe 'PersonTest' realiza os seguintes testes:
 
-- 'testar_email_com_arroba': verifica se '"email_teste@dominio.com.br"' é válido
-- 'testar_email_sem_arroba': verifica se '"email_testedominio.com.br"' é inválido
-- 'testar_email_mais_50_caracteres': verifica se emails com mais de 50 caracteres são inválidos
+- 'show_full_name': verifica se o nome completo está correto
+- 'test_calculateYearlySalary': valida o cálculo do salário anual
+- 'person_is_MEI': verifica se uma pessoa com dados válidos é MEI
+- 'person_is_not_MEI': verifica se uma pessoa com dados inválidos não é MEI
 
 ## 🚀 Como Executar
 
-1. Certifique-se de ter o Java e o Maven instalados.
+1. Instale o Java e o Maven
 2. Navegue até o diretório do projeto:
    '''bash
-   cd 0x01/email
+   '''cd 0x01/mei
