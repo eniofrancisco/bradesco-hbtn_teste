@@ -1,4 +1,3 @@
-package src;
 
 public class Person {
 
@@ -16,7 +15,7 @@ public class Person {
         if (!password.matches(".*[A-Z].*")) {
             return false;
         }
-        if (!password.matches(".*\\d.*")) { // <- CORREÇÃO AQUI
+        if (!password.matches(".*\d.*")) {
             return false;
         }
         if (!password.matches(".*[^a-zA-Z0-9].*")) {
