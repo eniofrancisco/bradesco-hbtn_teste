@@ -15,7 +15,7 @@ public class Person {
         if (!password.matches(".*[A-Z].*")) {
             return false;
         }
-        if (!password.matches(".*\d.*")) {
+        if (!password.matches(".*\\d.*")) {
             return false;
         }
         if (!password.matches(".*[^a-zA-Z0-9].*")) {
