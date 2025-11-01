@@ -1,31 +1,29 @@
-# Validador de MEI com JUnit
+# Validador de Usuário e Senha
 
-Este projeto Java verifica se uma pessoa está apta a se registrar como Microempreendedor Individual (MEI) com base nas regras da legislação brasileira.
+Este projeto Java implementa uma classe  com métodos para validar nome de usuário e senha, com testes automatizados usando JUnit 5.
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
-## 📌 Regras de Validação
+- 'src/main/java/Person.java': Classe principal com métodos 'checkUser()' e 'checkPassword()'
+- 'src/test/java/PersonTest.java': Classe de testes com JUnit 5
 
-A classe 'Person' possui o método 'isMEI()' que retorna 'true' ou 'false' com base nos seguintes critérios:
+## ✅ Regras
 
-- Ter mais de 18 anos
-- Não ser pensionista
-- Não ser servidor público
-- Não possuir outra empresa
-- Ter faturamento anual inferior a R$ 130.000,00
+### checkUser()
+- Mínimo de 8 caracteres
+- Apenas letras e números
 
-## 🧪 Testes com JUnit
+### checkPassword()
+- Mínimo de 8 caracteres
+- Pelo menos uma letra maiúscula
+- Pelo menos um número
+- Pelo menos um caractere especial
 
-A classe 'PersonTest' realiza os seguintes testes:
+## 🧪 Testes
 
-- 'show_full_name': verifica se o nome completo está correto
-- 'test_calculateYearlySalary': valida o cálculo do salário anual
-- 'person_is_MEI': verifica se uma pessoa com dados válidos é MEI
-- 'person_is_not_MEI': verifica se uma pessoa com dados inválidos não é MEI
+Os testes cobrem casos válidos e inválidos para nome de usuário e senha, usando '@ParameterizedTest'.
 
-## 🚀 Como Executar
+## 🚀 Como executar
 
-1. Instale o Java e o Maven
-2. Navegue até o diretório do projeto:
-   '''bash
-   '''cd 0x01/mei
+'''bash
+mvn test
